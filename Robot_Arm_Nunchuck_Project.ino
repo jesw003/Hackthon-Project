@@ -17,7 +17,9 @@ Servo claw_servo;
 byte accx,accy,zbut,cbut;
 
 void setup() {
- 
+  // put your setup code here, to run once:
+  //nunchuck_setpowerpins();
+  //nunchuck_init();
   
   swivel_servo.attach(swivel);
   base_servo.attach(base);
@@ -31,7 +33,18 @@ void loop() {
   // put your main code here, to run repeatedly:
   Serial.print("Test");
   delay(100);
-
+//   nunchuck_get_data();
+//        accx  = nunchuck_accelx(); // ranges from approx 70 - 182
+//        accy  = nunchuck_accely(); // ranges from approx 65 - 173
+//        zbut = nunchuck_zbutton();
+//        cbut = nunchuck_cbutton(); 
+//            
+//        Serial.print("accx: "); Serial.print((byte)accx,DEC);
+//        Serial.print("\taccy: "); Serial.print((byte)accy,DEC);
+//        Serial.print("\tzbut: "); Serial.print((byte)zbut,DEC);
+//        Serial.print("\tcbut: "); Serial.println((byte)cbut,DEC);
+//
+//        delay(100);
         
 position0();
 
